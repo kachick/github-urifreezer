@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/kachick/github-urifreezer'
   gem.license       = 'MIT'
   gem.name          = 'github-urifreezer'
-  gem.version       = Github::URIFreezer::VERSION.dup
+  gem.version       = '0.0.1.1'
 
   gem.required_ruby_version = '>= 2.2'
 

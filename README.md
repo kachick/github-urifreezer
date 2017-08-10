@@ -1,6 +1,8 @@
 Github URI Freezer
 =======================
 
+[OBSOLETED] Github gets `y` option https://help.github.com/articles/using-keyboard-shortcuts/#source-code-browsing
+
 [![Build Status](https://secure.travis-ci.org/kachick/github-urifreezer.png)](http://travis-ci.org/kachick/github-urifreezer)
 [![Gem Version](https://badge.fury.io/rb/github-urifreezer.png)](http://badge.fury.io/rb/github-urifreezer)
 [![Dependency Status](https://gemnasium.com/kachick/github-urifreezer.svg)](https://gemnasium.com/kachick/github-urifreezer)

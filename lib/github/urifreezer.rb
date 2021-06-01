@@ -1,4 +1,6 @@
 # coding: us-ascii
+# frozen_string_literal: true
+
 # Copyright (c) 2015 Kenichi Kamiya
 
 require 'uri'
@@ -20,8 +22,8 @@ module GitHub
         if %r!\A/(?<user_blob>(?<user_pj>[^/]+/[^/]+)/blob)/(?<branch>[^/]+)/?(?<suffix>.*)! =~ uri.path
           # GitHub API v3
           api_res = URI.open("https://api.github.com/repos/#{user_pj}/commits/#{branch}")
-          api = JSON.parse api_res.read, symbolize_names: true
-          URI::HTTPS.new uri.scheme, nil, uri.host, nil, nil, [nil, user_blob, api.fetch(:sha), suffix].join('/'), nil, nil, uri.fragment, true
+          api = JSON.parse(api_res.read, symbolize_names: true)
+          URI::HTTPS.new(uri.scheme, nil, uri.host, nil, nil, [nil, user_blob, api.fetch(:sha), suffix].join('/'), nil, nil, uri.fragment, true)
         else
           raise "given an unexpected URI: #{uri}"
         end

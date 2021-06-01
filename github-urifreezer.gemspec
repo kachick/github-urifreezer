@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require './lib/github/urifreezer/version'
 
 Gem::Specification.new do |gem|

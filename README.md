@@ -1,11 +1,10 @@
 GitHub URI Freezer
 =======================
 
-[OBSOLETED] GitHub gets `y` option https://help.github.com/articles/using-keyboard-shortcuts/#source-code-browsing
+NOTE: [GitHub has been provided `y` option](https://help.github.com/articles/using-keyboard-shortcuts/#source-code-browsing ) :smile:
 
-[![Build Status](https://secure.travis-ci.org/kachick/github-urifreezer.png)](http://travis-ci.org/kachick/github-urifreezer)
+![Build Status](https://github.com/kachick/github-urifreezer/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
 [![Gem Version](https://badge.fury.io/rb/github-urifreezer.png)](http://badge.fury.io/rb/github-urifreezer)
-[![Dependency Status](https://gemnasium.com/kachick/github-urifreezer.svg)](https://gemnasium.com/kachick/github-urifreezer)
 
 Description
 -----------
@@ -17,26 +16,10 @@ This script replaces them with other URI that based to latest-commit of the bran
 Usage
 -----
 
-```shell
-$ ghuf https://github.com/user/pj/blob/branch/path#Ln-Lm
-   #=> https://github.com/user/pj/blob/LATEST-COMMIT-OF-THE-BRANCH/path#Ln-Lm
-```
+Require Ruby 2.6 or later
 
-Requirements
--------------
-
-* Ruby - [2.2 or later](http://travis-ci.org/#!/kachick/github-urifreezer)
-
-Install
--------
-
-```shell
+```console
 $ gem install github-urifreezer
+$ ghuf.rb 'https://github.com/rails/rails/blob/v5.2.6/activesupport/lib/active_support.rb#L33'
+https://github.com/rails/rails/blob/48661542a2607d55f436438fe21001d262e61fec/activesupport/lib/active_support.rb#L33
 ```
-
-License
---------
-
-The MIT X11 License  
-Copyright (c) 2015 Kenichi Kamiya  
-See MIT-LICENSE for further details.

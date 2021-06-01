@@ -6,7 +6,7 @@ require 'open-uri'
 require 'json'
 require_relative 'urifreezer/version'
 
-module Github
+module GitHub
   module URIFreezer
     class << self
       # @param uri [String, URI]
@@ -18,12 +18,12 @@ module Github
       def fix(uri)
         uri = uri.kind_of?(URI) ? uri : URI.parse(uri)
         if %r!\A/(?<user_blob>(?<user_pj>[^/]+/[^/]+)/blob)/(?<branch>[^/]+)/?(?<suffix>.*)! =~ uri.path
-          # Github API v3
-          api_res = open   "https://api.github.com/repos/#{user_pj}/commits/#{branch}"
+          # GitHub API v3
+          api_res = URI.open("https://api.github.com/repos/#{user_pj}/commits/#{branch}")
           api = JSON.parse api_res.read, symbolize_names: true
           URI::HTTPS.new uri.scheme, nil, uri.host, nil, nil, [nil, user_blob, api.fetch(:sha), suffix].join('/'), nil, nil, uri.fragment, true
         else
-          raise "given an unexpexted URI: #{uri}"
+          raise "given an unexpected URI: #{uri}"
         end
       end
     end

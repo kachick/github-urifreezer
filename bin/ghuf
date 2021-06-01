@@ -7,7 +7,7 @@ require_relative '../lib/github/urifreezer'
 class GhUF < Thor
   desc 'based-URI', 'Print the fixed URI under latest commit of the branch'
   def fix(uri)
-    puts Github::URIFreezer.fix(uri)
+    puts GitHub::URIFreezer.fix(uri)
   end
 end
 

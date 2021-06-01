@@ -1,3 +1,4 @@
+# coding: us-ascii
 # frozen_string_literal: true
 
 require_relative './lib/github/urifreezer/version'
@@ -5,11 +6,9 @@ require_relative './lib/github/urifreezer/version'
 Gem::Specification.new do |gem|
   # specific
 
-  gem.description   = %q{GitHub referenced URI(branch/path#Ln-Lm) is very useful to communicate.
-  But they are temporary and unsteady, newer commits modify the meanings.
-  This script replaces them with other URI that based to latest-commit of the branch.}
+  gem.description   = %q{Getting GitHub permanent links to files}
 
-  gem.summary       = 'Get GitHub permalink of the code'
+  gem.summary       = gem.description
   gem.homepage      = 'https://github.com/kachick/github-urifreezer'
   gem.license       = 'MIT'
   gem.name          = 'github-urifreezer'

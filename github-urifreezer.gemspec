@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 2.6'
 
-  gem.add_runtime_dependency 'thor', '>= 1.1.0', '< 1.2.0'
+  gem.add_runtime_dependency 'thor', '>= 1.1.0', '< 1.3.0'
 
   # common
 

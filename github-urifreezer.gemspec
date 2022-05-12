@@ -14,9 +14,13 @@ Gem::Specification.new do |gem|
   gem.name          = 'github-urifreezer'
   gem.version       = GitHub::URIFreezer::VERSION
 
-  gem.required_ruby_version = '>= 2.6'
+  gem.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 
-  gem.add_runtime_dependency 'thor', '>= 1.1.0', '< 1.2.0'
+  gem.required_ruby_version = '>= 2.7'
+
+  gem.add_runtime_dependency 'thor', '~> 1.2.1'
 
   # common
 

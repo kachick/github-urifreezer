@@ -6,6 +6,13 @@ GitHub URI Freezer
 
 Getting GitHub permanent links to files
 
+Current Status
+---
+
+* ***This repository is archived***
+* ***No longer maintained***
+* See NOTE for the reason
+
 Usage
 -----
 
